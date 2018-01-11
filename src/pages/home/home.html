@@ -1,0 +1,61 @@
+<ion-header class="home" [ngStyle]="{'background-image': 'url(' + runNow.image + ')'}">
+
+  <ion-navbar>
+
+<ion-grid>
+  <ion-row>
+    <ion-col col-2><ion-icon name="arrow-round-back"></ion-icon></ion-col>
+    <ion-col col-9><ion-title>Today's Top Hits</ion-title></ion-col>
+    <ion-col col-1><ion-icon name="more"></ion-icon></ion-col>
+ </ion-row>
+</ion-grid>
+
+
+<div class="cus-head" padding> 
+  <h2>{{runNow.title}}</h2>
+  <p>{{runNow.singer}}</p>
+ </div>
+<ion-grid class="cus-run"><ion-row><span></span></ion-row></ion-grid>
+ <div class="cus-music">
+   <ion-grid>
+  <ion-row>
+    <ion-col col-4>  <ion-icon name="list"></ion-icon></ion-col>
+    <ion-col col-4>  <ion-icon name="play"></ion-icon></ion-col>
+    <ion-col col-4>  <ion-icon name="share"></ion-icon>
+ </ion-col>
+ </ion-row>
+</ion-grid>
+ </div>
+      <div class="overlay"></div>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+
+
+
+<ion-content padding>
+
+
+
+ <div class="cus-list">
+
+  <ion-list>
+   <ion-item (click)="run(list)" *ngFor ="let list of myList">
+    <ion-thumbnail item-start>
+      <img [src]="list.image">
+    </ion-thumbnail>
+    <h2>{{list.title}}</h2>
+    <p>{{list.singer}}</p>
+      <ion-icon class="music" *ngIf="list.run" name="musical-notes"></ion-icon>
+
+    <button ion-button clear item-end>{{list.duration}}</button>
+  </ion-item>
+</ion-list>
+
+ </div>
+
+
+</ion-content>

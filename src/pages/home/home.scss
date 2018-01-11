@@ -1,0 +1,98 @@
+//colors
+$color_medium_red_violet_approx: #af3483;
+$color_royal_heath_approx: #a61e75;
+$white: white;
+$color_cosmic_70_approx: rgba(115,35,105,.7);
+$color_kobi_approx: #dba5c3;
+$gray: gray;
+
+//fonts
+$font_0: Arial;
+$font_1: Helvetica;
+$font_2: sans-serif;
+
+//urls
+$url_0: url(http://www.kontrolmag.com/wp-content/uploads/2017/01/adele.jpg);
+
+page-home{
+.toolbar-background-md {
+	border-color: transparent;
+	background: transparent;
+}
+
+.cus-music {
+	background-color: $color_medium_red_violet_approx;
+	ion-row {
+		text-align: center;
+	}
+	ion-icon {
+		padding: 10px;
+		font-size: 20px;
+	}
+}
+.cus-head {
+	margin-top: 40%;
+	background-color: $color_royal_heath_approx;
+	padding-top: 0;
+	padding-bottom: 0;
+	font-family: $font_0, $font_1, $font_2;
+	font-weight: 200;
+	z-index: 200;
+}
+ion-header.home {
+	color: $white;
+	position: relative;
+	display: table;
+//	background-image: $url_0;
+	background-position: center center;
+	background-size: cover;
+}
+ion-icon {
+	cursor: pointer;
+}
+ion-list {
+	cursor: pointer;
+}
+.ion-navbar {
+	z-index: 2;
+}
+.overlay {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: $color_cosmic_70_approx;
+	z-index: -1;
+}
+.toolbar-title-md {
+	color: $white;
+}
+.cus-run {
+	padding-top: 1px;
+	background-color: $color_royal_heath_approx;
+}
+.cus-run::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	width: 45%;
+	height: 4px;
+	background-color: $color_kobi_approx;
+}
+ion-navbar.toolbar {
+	padding-bottom: 0;
+	padding-left: 0;
+	padding-right: 0;
+}
+.button-clear-md{color: $gray;}
+ion-icon.music{
+		color: $color_royal_heath_approx;
+}
+}
+.tabs-md .tab-button[aria-selected=true] {
+	color: $color_royal_heath_approx;
+	.tab-button-icon {
+		color: $color_royal_heath_approx;
+	}
+}
